@@ -3,55 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="formstyle.css">
+    <script defer src="formscript.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Registration Form</title>   
 </head>
 <body>
-    <div class="outer">
-        <h1>CALCULATOR..!</h1>
-        <div class="outbox">
-            <div class="container">
-                <div class="row">
-                    <input class="input" type="text"/>
-                </div>
-                <div class="row">
-                    <button class="button" style="background-color: rgb(225, 78, 29);">C</button>
-                    <button class="button">(</button>
-                    <button class="button">)</button>
-                    <button class="button">/</button>
-                </div>
-                <div class="row">
-                    <button class="button">7</button>
-                    <button class="button">8</button>
-                    <button class="button">9</button>
-                    <button class="button">*</button>
-                </div>
-                <div class="row">
-                    <button class="button">4</button>
-                    <button class="button">5</button>
-                    <button class="button">6</button>
-                    <button class="button">-</button>
-                </div>
-                <div class="row">
-                    <button class="button">1</button>
-                    <button class="button">2</button>
-                    <button class="button">3</button>
-                    <button class="button">+</button>
-                </div>
-                <div class="row">
-                    <button class="button">.</button>
-                    <button class="button">0</button>
-                    <button class="button">%</button>
-                    <button class="button" style="background-color: rgb(225, 78, 29);">=</button>
-                </div>
-        
-                
-        
-            </div>
-    
+    <div class="container">
+        <div class="regform">
+            <h1>STUDENT REGISTRATION FORM  <i class="fa-sharp fa-solid fa-user"></i></h1>
         </div>
-           
-    </div>  
- <script src="script.js"></script>   
+        <div class="disp">
+            <div class="leftside">
+                <form action="" id="userForm">
+                    <div class="mu">
+                        <label for="name" class="left">Name:-</label>
+                        <input style="color: black;" class="inputs1" type="text" id="name" placeholder="Please Enter Your Name Here" required/>
+                    </div>
+                    <div>
+                        <label for="email" class="left">Email:-</label>
+                        <input style="color: black;" class="inputs2" type="email" id="email" placeholder="Please Enter Your Email Here" required/>
+                    </div>
+                    <div>
+                        <label for="website" class="left">Website:-</label>
+                        <input style="color: black;" class="inputs3" type="url" id="website" placeholder="Please Enter Your Website Link Here" required/>
+                    </div>
+                    <div>
+                        <label for="image" class="left">Image Link:-</label>
+                        <input style="color: black;" class="inputs4" type="url" id="image" placeholder="Please Enter Your Image Link Here" required/>
+                    </div>
+                        <div class="g1">
+                            <label for="gender" class="gen">Gender:-</label>
+                            <input class="genderinput" type="radio"  name="gender" id="male" value="Male" required/>
+                            <label for="male" class="inp">Male</label>
+                            <input class="genderinput" type="radio" name="gender" id="female" value="Female" required/>
+                            <label for="female" class="inp">Female</label> 
+                        </div>
+                        <div>
+                            <label for="skills" class="ski">Skills:-</label>
+                            <input class="skillinput" type="checkbox" name="skill" id="java" value="Java"/>
+                            <label for="java" class="inp">Java</label>
+                            <input class="skillinput" type="checkbox" name="skill" id="html" value="HTML"/>
+                            <label for="html" class="inp">HTML</label>
+                            <input class="skillinput" type="checkbox" name="skill" id="css" value="CSS"/>
+                            <label for="css" class="inp">CSS</label>
+                        </div>
+                        <button type="submit" class="submitbtn">Enroll Student</button>   
+                </form>
+            </div>
+            <div class="rightside" id="enrolled-students">
+                <h2>Enrolled Students</h2>
+                <span id="span">Enrolled Students would be shown here!</span>
+            </div>
+        </div>    
+    </div> 
 </body>
 </html>
